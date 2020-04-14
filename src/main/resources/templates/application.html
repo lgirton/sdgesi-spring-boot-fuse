@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Welcome to [[${app}]]</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+<div id="wrapper" th:if="${environment}" th:style="'background-color: ' + ${color}">
+    <div id="banner" th:if="${environment}" th:text="${environment}"></div>
+</div>
+<h1><span th:text="${app}">Demo</span></h1>
+<p>Welcome to: <span th:text="${app}">N/A</span> App!</p>
+<p>Git Commit Id : <span th:text="${commit}">N/A</span></p>
+<p>Git Commit Id Short: <span th:text="${abbrev}">N/A</span></p>
+
+
+</body>
+</html>
